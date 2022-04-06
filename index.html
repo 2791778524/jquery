@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <style>
+        p{
+            position: relative;
+        }
+        .pink{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="hide">
+        hide
+    </div>
+    <div id="show">
+        show
+    </div>
+    <p>1111</p>
+    <div id="box" class="pink">
+        box
+        <p>p</p>
+    </div>
+    <div id="pink">
+        pink
+    </div>
+</body>
+<script>
+    $('#hide').click(function() {
+        $('p').hide(1000)
+    });
+    $('#show').click(function() {
+        $('p').show(1000)
+    });
+    $('#hide').click(function() {
+        $('p').toggle()
+    });
+    $('#hide').click(function() {
+        $('p').fadeOut()
+    });
+    $('#show').click(function() {
+        $('p').fadeIn()
+    });
+    $('#show').click(function() {
+        $('p').fadeToggle(1000)
+    });
+    $('#show').click(function() {
+        $('p').slideToggle(1000)
+    })
+    $('#show').click(function() {
+        $('p').animate({left: '250px', top: '100px'})
+    })
+    console.log($('#show'));
+    /* $('#box').click(function() {
+        $('#show').html('<h1>1111</h1>')
+    }) */
+    /* $('p').append('2222')
+    $('p').prepend('0000')
+    $('p').after('3333')
+    $('p').before('-1-1-1-1') */
+    /* $('#box').click(function() {
+        $('#box').remove()
+    }) */
+    /* $('#box').dblclick(function() {
+        $('#box').empty()
+    }) */
+    $('#pink').click(function() {
+        $('#pink').addClass('pink')
+    })
+    $('#box').click(function() {
+        $('#box').removeClass('pink')
+    })
+    
+</script>
+</html>
